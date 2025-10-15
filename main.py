@@ -13,3 +13,10 @@ async def read_root(request: Request):
         "request": request,
         "title": "Welcome"
     })
+
+@app.get("/login", response_class = HTMLResponse)
+async def read_root(request: Request):
+    return templates.TemplateResponse("auth/login.html", {
+        "request": request,
+        "title": "Welcome"
+    })
